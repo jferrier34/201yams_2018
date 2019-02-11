@@ -87,6 +87,45 @@ def yams(nb):
     print("chances to ge t a" + nb + " yams" + ": %0.2f%%" % (proba * 100))
     exit(0)
 
+def full(nb, nb2):
+    tmp = 0
+    check1 = 0
+    check2 = 0
+    if (int(sys.argv[1]) == nb):
+        check1 += 1
+    if (int(sys.argv[2]) == nb):
+        check1 += 1
+    if (int(sys.argv[3]) == nb):
+        check1 += 1
+    if (int(sys.argv[4]) == nb):
+        check1 += 1
+    if (int(sys.argv[5]) == nb):
+        check1 += 1
+
+    if (int(sys.argv[1]) == nb2):
+        check2 += 1
+    if (int(sys.argv[2]) == nb2):
+        check2 += 1
+    if (int(sys.argv[3]) == nb2):
+        check2 += 1
+    if (int(sys.argv[4]) == nb2):
+        check2 += 1
+    if (int(sys.argv[5]) == nb2):
+        check2 += 1
+
+    if (check1 == 3 and check2 == 2):
+        tmp = 1
+    else:
+        if (check1 > 3):
+            check1 = 3
+        if (check2 > 2):
+            check2 = 2
+        pair = factorial(5 - check1 - check2) / (factorial(3 - check2) * factorial((5 - check2 - check1) - (3 - check1)))
+        brelan = factorial(2 - check2) / (factorial(2 - check2) * factorial((2 - check2) - (2 - check2)))
+        res = (pair * brelan) / 6**(5 - check1 - check2)
+    print("chances to get a " + nb + " full of " + nb2 + ": %0.2f%%" % (res * 100))
+    exit(0)
+
 def check(nb):
     ret = 0
     if (int(sys.argv[1]) == nb):
