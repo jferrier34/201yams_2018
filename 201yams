@@ -20,7 +20,7 @@ def pair(nb):
     else:
         for x in range(2 - tmp, 5 - tmp + 1):
             proba += (factorial(5 - tmp) / (factorial(x) * factorial((5 - tmp) - x))) * pow(1 / 6, x) * pow(5 / 6, (5 - tmp) - x)
-    print("chances to ge t a" + nb + " pair" + ": %0.2f%%" % (proba * 100))
+    print("chances to get a " + nb + " pair" + ": %0.2f%%" % (proba * 100))
     exit(0)
 
 def three(nb):
@@ -41,7 +41,7 @@ def three(nb):
     else:
         for x in range(3 - tmp, 5 - tmp + 1):
             proba += (factorial(5 - tmp) / (factorial(x) * factorial((5 - tmp) - x))) * pow(1 / 6, x) * pow(5 / 6, (5 - tmp) - x)
-    print("chances to ge t a" + nb + " three" + ": %0.2f%%" % (proba * 100))
+    print("chances to get a " + nb + " three-of-a-kind" + ": %0.2f%%" % (proba * 100))
     exit(0)
 
 def four(nb):
@@ -63,7 +63,7 @@ def four(nb):
         for x in range(4 - tmp, 5 - tmp + 1):
             proba += (factorial(5 - tmp) / (factorial(x) * factorial((5 - tmp) - x))) * pow(1 / 6, x) * pow(5 / 6, (5 - tmp) - x)
             print(proba)
-    print("chances to ge t a" + nb + " four" + ": %0.2f%%" % (proba * 100))
+    print("chances to get a " + nb + " four-of-a-kind" + ": %0.2f%%" % (proba * 100))
     exit(0)
 
 def yams(nb):
@@ -84,7 +84,7 @@ def yams(nb):
     else:
         for x in range(5 - tmp, 5 - tmp + 1):
             proba += (factorial(5 - tmp) / (factorial(x) * factorial((5 - tmp) - x))) * pow(1 / 6, x) * pow(5 / 6, (5 - tmp) - x)
-    print("chances to ge t a" + nb + " yams" + ": %0.2f%%" % (proba * 100))
+    print("chances to get a " + nb + " yams" + ": %0.2f%%" % (proba * 100))
     exit(0)
 
 def full(nb, nb2):
@@ -152,7 +152,7 @@ def straight(nb):
         tmp = 1
     else:
         tmp = factorial(5 - test) / 6**(5 - test)
-    print("chacnes to get a" + nb + " straight" + ": %0.2f%%" % (tmp * 100))
+    print("chances to get a " + nb + " straight" + ": %0.2f%%" % (tmp * 100))
     exit(0)
 
 def full(nb, nb2):
